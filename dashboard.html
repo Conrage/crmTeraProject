@@ -13,10 +13,10 @@
 
 <body>
   <sidebar>
-    <header>
+    <div class="header">
       <img class="logo" src="img/tera-logo.png">
-    </header>
-    <main>
+    </div class="header">
+    <div class="main">
       <div class="user-info">
         <div class="user-img"><img src="img/user-img.jpg"></div>
         <div class="info">
@@ -34,12 +34,12 @@
           <span>Tickets</span>
         </nav-item>
       </nav-menu>
-    </main>
+    </div>
   </sidebar>
   <main>
     <div class="search-bar">
       <div class="input-box">
-        <div class="material-icons">search</div>
+        <span class="material-icons">search</span>
         <input placeholder="Search everything" />
       </div>
     </div>
@@ -52,21 +52,23 @@
         <button class="add-ticket">+ New ticket</button>
       </div>
       <div class="charts-container">
-        <div class="chart-box">
+        <div class="chart-box circle-chart">
           <div class="header">
             <h3>Tickets status</h3>
             <div class="dropdown">
-              This month <span class="material-icons">chevro-down</span>
+              This month <span class="material-icons">keyboard_arrow_down</span>
             </div>
           </div>
+          <img class="circle-img" src="img/circle_chart_img.svg">
         </div>
-        <div class="chart-box">
+        <div class="chart-box line-chart">
           <div class="header">
             <h3>Tickets by priority</h4>
               <div class="dropdown">
-                This month <span class="material-icons">chevro-down</span>
+                This month <span class="material-icons">keyboard_arrow_down</span>
               </div>
           </div>
+          <img class="line-img" src="img/line_chart_img.svg">
         </div>
       </div>
       <h4>New tickets</h4>
@@ -78,7 +80,7 @@
           <span class="issue">Cliente precisa de suporte para acessar plataforma de integração juntamente com
             informações de login</span>
           <div data-status="created" class="status">
-            Created <span class="material-icons">chevron-down</span>
+            Created <span class="material-icons">keyboard_arrow_down</span>
           </div>
         </div>
         <div class="ticket">
@@ -88,7 +90,7 @@
           <span class="issue">Cliente precisa de suporte para acessar plataforma de integração juntamente com
             informações de login</span>
           <div data-status="inprogress" class="status">
-            In progress <span class="material-icons">chevron-down</span>
+            In progress <span class="material-icons">keyboard_arrow_down</span>
           </div>
         </div>
       </div>
