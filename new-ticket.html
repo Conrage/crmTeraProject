@@ -51,29 +51,30 @@
             </div>
             <div class="input-box">
                 <label>Issue</label>
-                <textarea rows="5" cols="10" placeholder="The client has an example problem..."></textarea>
+                <textarea id="issue-input" rows="5" cols="10" placeholder="The client has an example problem..."></textarea>
             </div>
             <div class="input-box">
                 <label>Client</label>
-                <input type="text"></input>
+                <input id="client-input" type="text"></input>
             </div>
             <div class="input-box">
                 <label>Assigned To</label>
-                <input type="text"></input>
+                <input id="assigned-input" type="text"></input>
             </div>
             <div class="input-box">
                 <label>Progress</label>
                 <div data-status="created" class="status">
-                    <div>In progress</div><span class="material-icons">keyboard_arrow_down</span>
+                    <div>Created</div><span class="material-icons">keyboard_arrow_down</span>
                 </div>
             </div>
             <div class="footer">
                 <a href="./dashboard.html" class="button-cancel">Cancel</a>
-                <a href="./dashboard.html" class="button-add-ticket">Create ticket</a>
+                <button onclick="createTicket()" class="button-add-ticket">Create ticket</button>
             </div>
         </div>
     </main>
     <script src="js/sidebar.js"></script>
+    <script src="js/tickets.js"></script>
 </body>
 
 </html>
