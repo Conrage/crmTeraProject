@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Tera CRM - Dashboard</title>
+</head>
+
+<body>
+    <sidebar>
+        <div class="header">
+            <img class="logo" src="img/tera-logo.png">
+        </div class="header">
+        <div class="main">
+            <div class="user-info">
+                <div class="user-img"><img src="img/user-img.jpg"></div>
+                <div class="info">
+                    <p>John Doe</p>
+                    <span>johndoe@gmail.com</span>
+                </div>
+            </div>
+            <nav-menu>
+                <nav-item class="selected">
+                    <div class="icon material-icons">dashboard</div>
+                    <span>Overview</span>
+                </nav-item>
+                <nav-item>
+                    <div class="icon material-icons">description</div>
+                    <span>Tickets</span>
+                </nav-item>
+            </nav-menu>
+        </div>
+    </sidebar>
+    <main class="ticket-page">
+        <div class="search-bar">
+            <span class="material-icons menu-show">menu</span>
+            <div class="search-input-box">
+                <input style="background-color: #fff;" disabled />
+            </div>
+        </div>
+        <div class="content">
+            <div class="header">
+                <div class="titles">
+                    <h1>New ticket</h1>
+                    <h4>Fill the informations below and create a new ticket</h4>
+                </div>
+            </div>
+            <div class="input-box">
+                <label>Issue</label>
+                <textarea rows="5" cols="10" placeholder="The client has an example problem..."></textarea>
+            </div>
+            <div class="input-box">
+                <label>Client</label>
+                <input type="text"></input>
+            </div>
+            <div class="input-box">
+                <label>Assigned To</label>
+                <input type="text"></input>
+            </div>
+            <div class="input-box">
+                <label>Progress</label>
+                <div data-status="created" class="status">
+                    <div>In progress</div><span class="material-icons">keyboard_arrow_down</span>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="./dashboard.html" class="button-cancel">Cancel</a>
+                <a href="./dashboard.html" class="button-add-ticket">Create ticket</a>
+            </div>
+        </div>
+    </main>
+    <script src="js/sidebar.js"></script>
+</body>
+
+</html>
