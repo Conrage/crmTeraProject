@@ -6,11 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/main.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Tera CRM - Dashboard</title>
 </head>
-
 <body>
   <sidebar>
     <div class="header">
@@ -38,6 +36,7 @@
   </sidebar>
   <main>
     <div class="search-bar">
+      <span class="material-icons menu-show">menu</span>
       <div class="input-box">
         <span class="material-icons">search</span>
         <input placeholder="Search everything" />
@@ -74,8 +73,10 @@
       <h4>New tickets</h4>
       <div class="tickets-list">
         <div class="ticket">
-          <img class="logo" src="img/rd-logo.png">
-          <span>RD Station</span>
+          <div class="company-info">
+            <img class="logo" src="img/rd-logo.png">
+            <span>RD Station</span>
+          </div>
           <strong>Eduardo Teixeira</strong>
           <span class="issue">Cliente precisa de suporte para acessar plataforma de integração juntamente com
             informações de login</span>
@@ -84,18 +85,21 @@
           </div>
         </div>
         <div class="ticket">
-          <img class="logo" src="img/slack-logo.png">
-          <span>Slack</span>
+          <div class="company-info">
+            <img class="logo" src="img/slack-logo.png">
+            <span>Slack</span>
+          </div>
           <strong>João Conrad</strong>
           <span class="issue">Cliente precisa de suporte para acessar plataforma de integração juntamente com
             informações de login</span>
           <div data-status="inprogress" class="status">
-            In progress <span class="material-icons">keyboard_arrow_down</span>
+            <div>In progress</div><span class="material-icons">keyboard_arrow_down</span>
           </div>
         </div>
       </div>
     </div>
   </main>
+  <script src="js/dashboard.js"></script>
 </body>
 
 </html>

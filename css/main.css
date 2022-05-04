@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
-
+@import url("responsive.css");
 /* Box sizing rules */
 *,
 *::before,
 *::after {
+  transition: 0.2s;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -23,8 +24,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -75,7 +76,15 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
+main .search-bar .material-icons.menu-show{
+  left: 2rem;
+  cursor: pointer;
+  display: none;
+}
+main .search-bar .material-icons.menu-show:hover{
+  color: #2c2c2c;
+  transform: scale(1.05) translateY(-50%);
+}
 body {
   display: flex;
   width: 100vw;
@@ -84,12 +93,17 @@ body {
 }
 
 main {
-  width: calc(100% - 20rem);
+  width: 100%;
+  overflow-x: hidden;
+  padding-left: 20rem;
 }
 
 sidebar {
   height: 100%;
   width: 20rem;
+  position: fixed;
+  display: block;
+  transition: 0.4s;
   z-index: 1;
   background: #ffffff;
   box-shadow: 0px 0px 21px 5px rgba(0, 0, 0, 0.06);
@@ -103,7 +117,7 @@ sidebar .header {
 }
 
 sidebar .main {
-  padding: 1.8rem;
+  padding: 1.8rem 0rem 1.8rem 0rem;
 }
 
 sidebar .main .user-info {
@@ -145,13 +159,37 @@ sidebar .main nav-menu {
   flex-direction: column;
   padding: 2.5rem 0 2rem 1rem;
   gap: 1rem;
+  width: 100%;
+}
+
+sidebar nav-menu nav-item{
+  width: 95%;
+  padding: 1.2rem 1.8rem;
+  border-radius: 8px 0px 0px 8px;
+  display: flex;
+  color: #2c2c2c;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+sidebar nav-menu nav-item:hover{
+  background-color: #92e4d11b;
+}
+sidebar nav-menu nav-item.selected{
+  background: rgba(146, 228, 209, 0.19);
+  border-right: 4px solid #92E4D1;
+}
+
+sidebar nav-menu nav-item.selected .icon{
+  color: #92e4d1;
 }
 
 main .search-bar {
   width: 100%;
   height: fit-content;
   position: relative;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 0px 21px 5px rgba(0, 0, 0, 0.06);
 }
 
@@ -161,7 +199,7 @@ main .search-bar input {
   padding: 2rem 3rem;
   border: none;
   outline: none;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
   font-size: 1rem;
@@ -181,9 +219,9 @@ main .input-box::after {
   text-align: right;
   border-radius: 8px;
   transform: translate(-400%, -100%);
-  transition: transform 0.6s, width .6s;
+  transition: transform 0.6s, width 0.6s;
   height: 6px;
-  background: linear-gradient(90.08deg, #92E4D1 18.21%, #669AFF 115.2%);
+  background: linear-gradient(90.08deg, #92e4d1 18.21%, #669aff 115.2%);
 }
 
 main .input-box:focus-within::after {
@@ -205,19 +243,20 @@ main .dashboard-content {
 }
 
 main .dashboard-content .titles h1 {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 1.7rem;
-  color: #2C2C2C;
+  color: #2c2c2c;
 }
 
 main .dashboard-content .titles h4 {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
   font-size: 1.1rem;
   color: rgba(44, 44, 44, 0.8);
+  margin: 0;
 }
 
 main .dashboard-content .header {
@@ -227,22 +266,21 @@ main .dashboard-content .header {
 }
 
 main .dashboard-content button.add-ticket {
-  background-image: linear-gradient(99.44deg, #92E4D1 10.42%, #6EA8F6 155.94%);
+  background-image: linear-gradient(99.44deg, #92e4d1 10.42%, #6ea8f6 155.94%);
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   background-size: 150% auto;
   font-size: 1rem;
   border: none;
   outline: none;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 0.7rem 1rem;
   transition: 0.4s;
   box-shadow: 0px 2px 13px -3px #89d5da00;
-
 }
 
 main .dashboard-content button.add-ticket:hover {
@@ -260,7 +298,7 @@ main .charts-container {
 
 main .charts-container .chart-box {
   width: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid rgba(44, 44, 44, 0.1);
   box-sizing: border-box;
   padding: 2rem 2.5rem 0rem 2.5rem;
@@ -272,18 +310,18 @@ main .charts-container .chart-box {
 }
 
 main .charts-container .chart-box h3 {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 1.1rem;
-  color: #2C2C2C;
+  color: #2c2c2c;
 }
 
 main .chart-box .dropdown {
   display: flex;
   align-items: center;
-  gap: .5rem;
-  font-family: 'Poppins';
+  gap: 0.5rem;
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 0.9rem;
@@ -306,4 +344,80 @@ main .chart-box .line-img {
   max-width: 600px;
 }
 
+main .dashboard-content h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: rgba(44, 44, 44, 0.8);
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-content .ticket {
+  padding: 1.3rem 2.1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  background: #ffffff;
+  border: 1px solid rgba(44, 44, 44, 0.1);
+  box-sizing: border-box;
+}
+.dashboard-content .ticket .company-info {
+  display: flex;
+  min-width: fit-content;
+  gap: 1.2rem;
+}
+.dashboard-content .ticket .company-info span{
+  white-space: nowrap;
+  min-width: fit-content;
+}
+.dashboard-content .status {
+  display: flex;
+  background: rgba(196, 196, 196, 0.32);
+  border-radius: 4px;
+  padding: 1px 9px;
+}
+.dashboard-content .status {
+  display: flex;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  align-items: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  color: rgba(44, 44, 44, 0.6);
+}
+.dashboard-content .status[data-status="inprogress"] {
+  background: rgba(242, 197, 110, 0.6);
+  color: rgba(126, 109, 75, 0.75);
+}
+.dashboard-content .status div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dashboard-content .ticket .issue {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: rgba(44, 44, 44, 0.5);
+}
+.dashboard-content .ticket strong {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #2c2c2c;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 /*# sourceMappingURL=main.css.map */

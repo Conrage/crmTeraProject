@@ -1,0 +1,14 @@
+@media screen and (max-width:1200px) {
+    main .search-bar .material-icons.menu-show{
+        display: block !important;
+    }
+    sidebar {
+        transform: translateX(-100%);
+        display: none;
+        box-shadow: 0px 10px 250px 300px rgb(0 0 0 / 20%);
+    }
+    main {
+        width: 100%;
+        padding: 0 !important;
+    }
+}
