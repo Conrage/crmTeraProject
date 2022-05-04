@@ -12,12 +12,13 @@ function createTicket() {
   const issue = document.getElementById('issue-input').value;
   const client = document.getElementById('client-input').value;
   const assigned = document.getElementById('assigned-input').value;
+  const status = document.getElementById('status-input').dataset.status;
 
   let ticket = {
     issue: issue,
     client: client,
     assigned: assigned,
-    status: 'inprogress'
+    status: status
   };
   console.log(state.tickets)
   state.tickets.push(ticket);
