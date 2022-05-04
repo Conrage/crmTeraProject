@@ -29,7 +29,7 @@ function createTicket() {
 
 function renderTickets() {
   const list = document.querySelector('.tickets-list');
-
+  if(!list) return;
   state.tickets.forEach((ticket) => {
     const div = document.createElement('div');
     div.className = 'ticket';
