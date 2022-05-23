@@ -1,5 +1,5 @@
 @media screen and (max-width:1200px) {
-    main .search-bar .material-icons.menu-show{
+    main .search-bar .material-icons.menu-show {
         display: block !important;
     }
     sidebar {
@@ -10,5 +10,32 @@
     main {
         width: 100%;
         padding: 0 !important;
+    }
+}
+
+@media screen and (max-width:900px) {
+    * {
+        font-size: 90%;
+    }
+    .content {
+        padding: 2rem !important;
+    }
+}
+
+@media screen and (max-width:725px) {
+    .charts-container {
+        flex-direction: column;
+    }
+    main .charts-container .chart-box.circle-chart {
+        max-width: none;
+    }
+    nav-menu {
+        font-size: 1.2rem;
+    }
+    a.button-add-ticket {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        box-shadow: 0px 2px 13px -3px #242a2a3d;
     }
 }
