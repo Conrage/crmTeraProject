@@ -22,62 +22,7 @@
 
 
 
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
 
-* {
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
-}
-
-body, html {
-	height: 100%;
-	font-family: Oswald-Regular, sans-serif;
-}
-
-/*---------------------------------------------*/
-a {
-	font-family: Oswald-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-
-a:focus {
-	outline: none !important;
-}
-
-a:hover {
-	text-decoration: none;
-  color: #111111;
-}
-
-/*---------------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
-	margin: 0px;
-}
-
-p {
-	font-family: Oswald-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-}
-
-ul, li {
-	margin: 0px;
-	list-style-type: none;
-}
-
-
-/*---------------------------------------------*/
 input {
 	outline: none;
 	border: none;
@@ -104,17 +49,6 @@ textarea:focus, input:focus {
 }
 
 
-input::-webkit-input-placeholder { color: #43383e;}
-input:-moz-placeholder { color: #43383e;}
-input::-moz-placeholder { color: #43383e;}
-input:-ms-input-placeholder { color: #43383e;}
-
-textarea::-webkit-input-placeholder { color: #43383e;}
-textarea:-moz-placeholder { color: #43383e;}
-textarea::-moz-placeholder { color: #43383e;}
-textarea:-ms-input-placeholder { color: #43383e;}
-
-/*---------------------------------------------*/
 button {
 	outline: none !important;
 	border: none;
@@ -133,35 +67,26 @@ iframe {
 [ Utility ]*/
 .txt1 {
   font-family: Oswald-Bold;
-  font-size: 20px;
+  font-size: 30px;
   color: #333333;
   line-height: 1.2;
 }
 
 .txt2 {
   font-family: Oswald-Regular;
-  font-size: 16px;
-  color: #999999;
+  font-size: 20px;
+  color: #00000091;
   line-height: 1.4;
 }
 
 .txt3 {
   font-family: Oswald-Regular;
-  font-size: 16px;
+  font-size: 25px;
   color: #333333;
   line-height: 1.2;
   text-transform: uppercase;
 }
 
-.bg1 {background-color: #3b5998;}
-.bg2 {background-color: #1da1f2;}
-
-.bo1 {border-bottom: 1px solid #929292;}
-
-.hov1:hover {
-  border-bottom: 1px solid #111111;
-  color: #111111;
-}
 
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
@@ -201,11 +126,10 @@ iframe {
 
 .login100-form-title {
   font-family: Oswald-Medium;
-  font-size: 30px;
-  color: #43383e;
+  font-size:61px;
+  color: #000000b9;
   line-height: 1.2;
   text-align: center;
-
   display: block;
 }
 
@@ -332,3 +256,6 @@ iframe {
   width: calc(100% + 20px);
 }
 
+#botaoinscreve{
+  font-size: 35px;
+}
