@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="img/logo-ico.ico" />
     <title>Tera CRM - Dashboard</title>
 </head>
@@ -14,11 +15,15 @@
 <body>
     <sidebar>
         <div class="header">
-            <img class="logo" src="img/tera-logo.png">
+            <img class="logo" alt="Logo Tera" src="img/tera-logo.png">
+            <div class="checkbox">
+                <input value="true" type="checkbox" id="theme-switch" style="opacity: 0;width: 0; height: 0">
+                <label for="theme-switch" class="toggle"><span></span></label>
+            </div>
         </div class="header">
         <div class="main">
             <div class="user-info">
-                <div class="user-img"><img src="img/user-img.jpg"></div>
+                <div class="user-img"><img alt="User Image" src="img/user-img.jpg"></div>
                 <div class="info">
                     <p>John Doe</p>
                     <span>johndoe@gmail.com</span>
@@ -60,7 +65,8 @@
                             This month <span class="material-icons">keyboard_arrow_down</span>
                         </div>
                     </div>
-                    <img class="circle-img" src="img/circle_chart_img.svg">
+                    <div class="circle-img">
+                    </div>
                 </div>
                 <div class="chart-box line-chart">
                     <div class="header">
@@ -69,16 +75,17 @@
                                 This month <span class="material-icons">keyboard_arrow_down</span>
                             </div>
                     </div>
-                    <img class="line-img" src="img/line_chart_img.svg">
+                    <div class="line-img">
+                    </div>
                 </div>
             </div>
             <h4>New tickets</h4>
             <div class="tickets-list">
             </div>
-        </div>
     </main>
     <script src="js/sidebar.js"></script>
     <script src="js/tickets.js"></script>
+    <script src="js/dashboard.js"></script>
 </body>
 
 </html>
