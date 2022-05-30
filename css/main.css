@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 @import url('responsive.css');
+
+/* Variables */
+
+*{
+  --cor-priority-urgent: #f0a48c;
+  --cor-priority-normal: #92e4d1;
+  --cor-priority-secondary: #669aff;
+  --cor-progress-inprogress: #f2c56e;
+  --cor-progress-completed: #2e9148;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -75,6 +86,29 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/* priority colors */
+
+.urgent{
+  color: var(--cor-priority-urgent)
+}
+
+.normal{
+  color: var(--cor-priority-normal)
+}
+
+.secondary{
+  color: var(--cor-priority-secondary)
+}
+
+.inprogress{
+  color: var(--cor-progress-inprogress);
+}
+
+.completed{
+  color: var(--cor-progress-completed);
+}
+
 main .search-bar .material-icons.menu-show {
   left: 2rem;
   cursor: pointer;
@@ -299,7 +333,7 @@ main .content .header {
   color: #92e4d1;
   transform: scale(1.02) translateY(-3px);
 }
-.button-add-ticket {
+.button-add-ticket, .button-modal {
   background-image: linear-gradient(99.44deg, #92e4d1 10.42%, #6ea8f6 155.94%);
   border-radius: 4px;
   box-sizing: border-box;
@@ -494,4 +528,147 @@ main .content h4 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* TABLE TICKET */
+
+
+.table{
+  --bs-table-hover-color: rgb(124, 124, 124);
+}
+.table-bg{
+  background-color: rgb(255, 255, 255);
+}
+.table-color{
+  color: rgb(124, 124, 124);
+}
+.page-link:focus{
+  color:#adadad;
+  box-shadow: none;
+}
+.page-link:hover{
+  color:#adadad ;
+}
+.pag-color{
+  color:  #adadad;
+}
+
+
+/* MODAL TICKET */
+
+
+.modal-body{
+  height: 90vh;
+}
+
+.modal-content{
+  background-color: #E5E5E5;
+}
+
+.modal-header{
+  border-bottom: 0.1rem solid rgba(44, 44, 44, 0.07);
+}
+
+
+.changes-item{
+  font-size: 0.6rem;
+  padding: 2px;
+  color: rgba(44, 44, 44, 0.6);
+  margin-top: 1rem;
+}
+
+.name-changes{
+  font-weight: bold;
+}
+
+.issue-ticket{
+  width: 100%;
+  height: 40%;
+  background: #fafafa;
+  border: 1px solid rgba(44, 44, 44, 0.05);
+  padding: 1rem;
+}
+
+.area-grafico{
+  background-color:white;
+  margin-top: 2rem;
+  height: 50%;
+  padding: 2rem;
+}
+
+.grafico, .header{
+  margin-top: 0.5rem;
+}
+
+.grafico, h6{
+  font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.6rem;
+    color: #2c2c2c;
+}
+
+.button-modal{
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #1e2125;
+  background-color: #a9cafb;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1400px){
+  .modal-xl {
+      max-width: 1330px;
+  }
+  }
+
+  @media (max-width:992px){
+    .button-modal{
+      font-size: 0.8rem;
+      padding: 0.5rem 0.5rem;
+    }
+    .dropdown-toggle {
+      white-space: normal;
+  }
+    .area-grafico{
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+    .grafico{
+      width: 80%;
+    }
+    .dropdown-menu{
+      min-width: 0px
+    }
+}
+
+@media (max-width:576px){
+  .area-grafico{
+    flex-direction: column;
+    align-items: center;
+    height: 55%;
+  }
+  .modal-body{
+    height: 100%;
+  }
+  .ticket-buttons{
+    margin-top: 2rem;
+  }
+  .ticket-main{
+    margin-top: 2rem;
+  }
+
+  .modal-header h2, .modal-header h3{
+    font-size: 0.8rem !important;
+  }
 }
