@@ -333,7 +333,7 @@ main .content .header {
   color: #92e4d1;
   transform: scale(1.02) translateY(-3px);
 }
-.button-add-ticket {
+.button-add-ticket, .button-modal {
   background-image: linear-gradient(99.44deg, #92e4d1 10.42%, #6ea8f6 155.94%);
   border-radius: 4px;
   box-sizing: border-box;
@@ -557,15 +557,8 @@ main .content h4 {
 /* MODAL TICKET */
 
 
-
-@media (min-width: 1400px){
-.modal-xl {
-    max-width: 1330px;
-}
-}
-
 .modal-body{
-  height: 80vh;
+  height: 90vh;
 }
 
 .modal-content{
@@ -576,26 +569,6 @@ main .content h4 {
   border-bottom: 0.1rem solid rgba(44, 44, 44, 0.07);
 }
 
-
-.btn-ticket{
-  background-image: linear-gradient( 99.44deg, #92e4d1 10.42%, #6ea8f6 155.94%);
-  border-radius: 4px;
-  box-sizing: border-box;
-  cursor: pointer;
-  font-family: 'Poppins';
-  font-style: normal;
-  text-decoration: none;
-  font-weight: 500;
-  background-size: 150% auto;
-  font-size: 1rem;
-  border: none;
-  outline: none;
-  color: #ffffff;
-  padding: 0.7rem 1rem;
-  transition: 0.4s;
-  box-shadow: 0px 2px 13px -3px #89d5da00;
-  margin-bottom: 20px;
-}
 
 .changes-item{
   font-size: 0.6rem;
@@ -619,6 +592,8 @@ main .content h4 {
 .area-grafico{
   background-color:white;
   margin-top: 2rem;
+  height: 50%;
+  padding: 2rem;
 }
 
 .grafico, .header{
@@ -631,4 +606,69 @@ main .content h4 {
     font-weight: 500;
     font-size: 0.6rem;
     color: #2c2c2c;
+}
+
+.button-modal{
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #1e2125;
+  background-color: #a9cafb;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1400px){
+  .modal-xl {
+      max-width: 1330px;
+  }
+  }
+
+  @media (max-width:992px){
+    .button-modal{
+      font-size: 0.8rem;
+      padding: 0.5rem 0.5rem;
+    }
+    .dropdown-toggle {
+      white-space: normal;
+  }
+    .area-grafico{
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+    .grafico{
+      width: 80%;
+    }
+    .dropdown-menu{
+      min-width: 0px
+    }
+}
+
+@media (max-width:576px){
+  .area-grafico{
+    flex-direction: column;
+    align-items: center;
+    height: 55%;
+  }
+  .modal-body{
+    height: 100%;
+  }
+  .ticket-buttons{
+    margin-top: 2rem;
+  }
+  .ticket-main{
+    margin-top: 2rem;
+  }
+
+  .modal-header h2, .modal-header h3{
+    font-size: 0.8rem !important;
+  }
 }
