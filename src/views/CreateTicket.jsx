@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function CreateTicket() {
   const [issue, setIssue] = useState('');
   const [client, setClient] = useState('');
   const [assigned, setAssigned] = useState('');
+  const navigate = useNavigate();
 
   const createTicket = () => {
     const ticket = { issue, client, assigned };
     axios.post('http://localhost:4000/crm-tera/ticket/create', ticket);
+    navigate('/', { replace: true });
   };
 
   return (
@@ -67,7 +69,9 @@ function CreateTicket() {
             <NavLink to='/' className='button-cancel'>
               Cancel
             </NavLink>
-            <button onClick={createTicket} className='button-add-ticket'>Create ticket</button>
+            <button onClick={createTicket} className='button-add-ticket'>
+              Create ticket
+            </button>
           </div>
         </div>
       </main>
