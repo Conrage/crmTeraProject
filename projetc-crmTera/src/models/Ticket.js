@@ -19,7 +19,7 @@ const ticketSchema = new mongoose.Schema(
     },
     "status": {
         type: String,
-        default: "InProgress"
+        default: "inprogress"
     },
     "created": {
         type: Date,

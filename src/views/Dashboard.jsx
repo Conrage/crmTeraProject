@@ -78,7 +78,7 @@ function Dashboard() {
                   <strong>{ticket.assigned}</strong>
                   <span className='issue'>{ticket.issue}</span>
                   <div data-status={ticket.status} className='status'>
-                    <div>${translateStatus[ticket.status]}</div>
+                    <div>{translateStatus[ticket.status]}</div>
                     <span className='material-icons'>keyboard_arrow_down</span>
                   </div>
                 </div>
