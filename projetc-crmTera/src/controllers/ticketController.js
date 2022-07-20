@@ -19,6 +19,16 @@ const findTicket = async (req, res) => {
     }
 }
 
+const getAllTickets = async (req, res) => {
+    try {
+       const Tickets =  await ticket.find()
+       return res.status(200).send(Tickets)
+    } catch(error){
+        console.log(error)
+        return res.status(400).send({"message":"Erro ao buscar o ticket. Por favor, tente novamente."})
+    }
+}
+
 const updateTicket = async (req, res) => {
     const { issue, status, priority, } = req.body;
     const newTicket = await ticket.findByIdAndUpdate(req.params.id, { issue, status, priority });
@@ -37,5 +47,6 @@ export default {
     createTicket,
     updateTicket,
     findTicket,
-    deleteTicket
+    deleteTicket,
+    getAllTickets
 };

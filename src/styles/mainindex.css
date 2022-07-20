@@ -19,10 +19,6 @@ textarea {
   border: none;
 }
 
-textarea:focus, input:focus {
-  border-color: transparent !important;
-}
-
 
 button {
 	outline: none !important;
