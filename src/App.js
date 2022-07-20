@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import Dashboard from './views/Dashboard';
 import Tickets from './views/Tickets';
+import CreateTicket from './views/CreateTicket';
 
 import Sidebar from './components/Sidebar';
 
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route index element={<Dashboard />} />
         <Route path='/tickets' element={<Tickets />} />
+        <Route path='/create/ticket' element={<CreateTicket />} />
       </Routes>
     </BrowserRouter>
   );

@@ -151,7 +151,7 @@ main .search-bar .material-icons.menu-show:focus {
   transform: scale(1.05) translateY(-50%);
 }
 
-.dashboard-container, .tickets-container {
+.dashboard-container, .tickets-container, .create-ticket-container {
   display: flex;
   width: 100vw;
   background-color: var(--sec-bg-color);
@@ -404,6 +404,7 @@ main .content .header {
 
 .button-add-ticket:hover,
 .button-add-ticket:focus {
+  color: var(--text-color);
   background-position: center right;
   transform: scale(1.02) translateY(-3px);
 }

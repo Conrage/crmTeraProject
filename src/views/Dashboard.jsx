@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+
 class Dashboard extends Component {
   render() {
     return (
@@ -17,9 +19,9 @@ class Dashboard extends Component {
                 <h1>Tickets</h1>
                 <h4>Welcome to CRM dashboard</h4>
               </div>
-              <a href='./new-ticket.html' className='button-add-ticket'>
+              <NavLink to='/create/ticket' className='button-add-ticket'>
                 + New ticket
-              </a>
+              </NavLink>
             </div>
             <div className='charts-container'>
               <div className='chart-box circle-chart'>
