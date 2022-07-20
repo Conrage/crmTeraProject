@@ -1,5 +1,3 @@
-console.log('Vai COrithians!')
-
 function removeRow() {
     if (window.matchMedia('(max-width: 576px)').matches) {
         document.querySelector('.modal-body').classList.remove('row');

@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>Tera CRM - Tickes</title>
         <script src="js/modal_ticket.js"></script>
+        <script src="js/tickets.js"></script>
       </head>
 <body>
 
@@ -19,7 +20,7 @@
           <div class="modal-content">
             <div class="modal-header">
                 <div class="row col-12 align-items-end">
-                    <h3 class="col text-center fs-5">ID</h3>
+                    <h3 id="ticketID"class="col text-center fs-5">ID</h3>
                     <h2 class="col text-center">Client</h2>
                     <h3 class="col text-center fs-5">Created By</h3>
                 </div>
@@ -61,7 +62,7 @@
                       <li><a class="dropdown-item" href="#">Waiting</a></li>
                     </ul>
                   </div>
-                  <div class="dropdown  d-flex justify-content-center"">
+                  <div class="dropdown  d-flex justify-content-center">
                     <button class="dropdown-toggle button-modal" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                       Priority
                     </button>
@@ -71,7 +72,7 @@
                       <li><a class="dropdown-item" href="#">Secondary</a></li>
                     </ul>
                   </div>
-                  <div class="dropdown  d-flex justify-content-center"">
+                  <div class="dropdown  d-flex justify-content-center">
                     <button class="dropdown-toggle button-modal" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                       Responsable
                     </button>
@@ -81,7 +82,9 @@
                       <li><a class="dropdown-item" href="#">Filipe</a></li>
                     </ul>
                   </div>
-                
+                <div>
+                  <button class="button-modal" onclick="updateTicket()">Update Ticket</button>
+                </div>
               </div>
             </div>
           </div>
@@ -162,7 +165,7 @@
               <h1>Tickets</h1>
               <h4>Know about your tickets</h4>
             </div>
-            <a href="./new-ticket.html" class="button-add-ticket">+ New ticket</a>
+            <a href="" class="button-add-ticket" onclick="getTickets()">+ New ticket</a>
           </div>
 
             <!-----TABLE----->
