@@ -1,6 +1,7 @@
 import React from 'react';
 import CircleChart from '../images/circle_chart_img.svg';
 import LineChart from '../images/line_chart_img.svg';
+import { NavLink } from 'react-router-dom';
 
 function Tickets() {
   return (
@@ -173,9 +174,9 @@ function Tickets() {
               <h1>Tickets</h1>
               <h4>Know about your tickets</h4>
             </div>
-            <a href='./new-ticket.html' className='button-add-ticket'>
+            <NavLink to='/create/ticket' className='button-add-ticket'>
               + New ticket
-            </a>
+            </NavLink>
           </div>
           <div className='table-responsive-xxl'>
             <table className='table table-hover mt-5 table-bg'>
