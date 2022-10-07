@@ -1,0 +1,78 @@
+.modal-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay{
+    background: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.modal-content{
+    width: 90%;
+    height: 80%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.modal-header{
+    justify-content: space-around;
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.modal-body-left{
+    width: 25%;
+    justify-content: center;
+    padding: 5px;
+}
+
+
+.modal-body-center{
+    width: 50%;
+    text-align: center;
+}
+
+.modal-body-right{
+    width: 25%;
+    text-align: center;
+    flex-direction: row;
+}
+
+.changes-item{
+    font-size: 0.6rem;
+    color: rgba(44, 44, 44, 0.6);
+    margin-top: 1rem;
+}
+
+.issue-area{
+    width: 90%;
+}
+
+.button-ticket{
+    width: 75%;
+    background-image: linear-gradient(99.44deg, #92e4d1 10.42%, #6ea8f6 155.94%);
+    border-radius: 4px;
+    box-shadow: 0.8px 0.8px #7786878b;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 0.7rem;
+}
+
+

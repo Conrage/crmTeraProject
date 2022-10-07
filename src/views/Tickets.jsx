@@ -1,165 +1,65 @@
 import React from 'react';
-import CircleChart from '../images/circle_chart_img.svg';
-import LineChart from '../images/line_chart_img.svg';
+// import CircleChart from '../images/circle_chart_img.svg';
+// import LineChart from '../images/line_chart_img.svg';
 import { NavLink } from 'react-router-dom';
+import Modal from 'react-modal'
+// import DetailsTicket from './DetailsTicket';
+
+
+Modal.setAppElement('#root');
 
 function Tickets() {
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
   return (
+    
     <div className='tickets-container'>
-      <div
-        className='modal fade'
-        id='ModalXl'
-        tabindex='-1'
-        aria-labelledby='ModalXlLabel'
-        style={{ display: 'none' }}
-        aria-modal='true'
-        role='dialog'
-      >
-        <div className='modal-dialog modal-xl'>
-          <div className='modal-content'>
-            <div className='modal-header'>
-              <div className='row col-12 align-items-end'>
-                <h3 className='col text-center fs-5'>ID</h3>
-                <h2 className='col text-center'>Client</h2>
-                <h3 className='col text-center fs-5'>Created By</h3>
-              </div>
-              <button
-                type='button'
-                className='btn-close'
-                data-bs-dismiss='modal'
-                aria-label='Close'
-              ></button>
-            </div>
-            <div className='modal-body row'>
-              <div className='col-3 ticket-status'>
-                <h5>Last Changes</h5>
-                <p className='changes-item'>
-                  <span className='name-changes'>John</span> Created the Ticket
-                  on 08 Feb at 14pm
-                </p>
-                <p className='changes-item'>
-                  <span className='name-changes'>Filipe</span> Assigned to
-                  Eduardo on 10 Feb at 11am
-                </p>
-                <p className='changes-item'>
-                  <span className='name-changes'>John</span> Change de Priority
-                  on 09 Feb at 16:30pm
-                </p>
-                <p className='changes-item'>
-                  <span className='name-changes'>Eduardo</span> Edit the Issue
-                  on 10 Feb at 11am
-                </p>
-              </div>
-              <div className='col-6 ticket-main flex-column'>
-                <textarea
-                  id='issue-input-ticket'
-                  placeholder='The client has an example problem...'
-                  className='input-box issue-ticket'
-                ></textarea>
-                <div className='area-grafico row'>
-                  <div className='grafico col-6'>
-                    <div className='row header'>
-                      <h6 className='col'>Time Trackig</h6>
-                    </div>
-                    <img
-                      className='circle-img'
-                      alt='Circle Chart'
-                      src={CircleChart}
-                    ></img>
-                  </div>
-                  <div className='grafico col-6'>
-                    <div className='row header'>
-                      <h6 className='col'>Ticket Changes</h6>
-                    </div>
-                    <img
-                      className='line-img'
-                      alt='Line Chart'
-                      src={LineChart}
-                    ></img>
-                  </div>
-                </div>
-              </div>
-              <div className='col-3 ticket-buttons flex-column justify-content-end'>
-                <div className='dropdown d-flex justify-content-center'>
-                  <button
-                    className='dropdown-toggle button-modal'
-                    type='button'
-                    id='dropdownMenuButton1'
-                    data-bs-toggle='dropdown'
-                    aria-expanded='false'
-                  >
-                    Status
-                  </button>
-                  <ul
-                    className='dropdown-menu button-modal'
-                    aria-labelledby='dropdownMenuButton1'
-                  >
-                    <li>
-                      <span className='dropdown-item'>Completed</span>
-                    </li>
-                    <li>
-                      <span className='dropdown-item'>In Progress</span>
-                    </li>
-                    <li>
-                      <span className='dropdown-item'>Waiting</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className='dropdown  d-flex justify-content-center'>
-                  <button
-                    className='dropdown-toggle button-modal'
-                    type='button'
-                    id='dropdownMenuButton1'
-                    data-bs-toggle='dropdown'
-                    aria-expanded='false'
-                  >
-                    Priority
-                  </button>
-                  <ul
-                    className='dropdown-menu button-modal'
-                    aria-labelledby='dropdownMenuButton1'
-                  >
-                    <li>
-                      <span className='dropdown-item'>Urgent</span>
-                    </li>
-                    <li>
-                      <span className='dropdown-item'>Normal</span>
-                    </li>
-                    <li>
-                      <span className='dropdown-item'>Secondary</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className='dropdown  d-flex justify-content-center'>
-                  <button
-                    className='dropdown-toggle button-modal'
-                    type='button'
-                    id='dropdownMenuButton1'
-                    data-bs-toggle='dropdown'
-                    aria-expanded='false'
-                  >
-                    Responsable
-                  </button>
-                  <ul
-                    className='dropdown-menu button-modal'
-                    aria-labelledby='dropdownMenuButton1'
-                  >
-                    <li>
-                      <span className='dropdown-item'>John</span>
-                    </li>
-                    <li>
-                      <span className='dropdown-item'>Eduardo</span>
-                    </li>
-                    <li>
-                      <span className='dropdown-item'>Filipe</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+      <div className='modal-container'>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        overlayClassName="modal-overlay"
+        className="modal-content"
+        >
+
+        <div className='modal-header'>
+          <h4>ID</h4>
+          <h2>Client</h2>
+          <h4>Created By:</h4>
+        </div>
+        <div className='modal-body'>
+          <div className='modal-body-left'>
+            <h4>Last Changes</h4>
+            <p className='changes-item'>Created the Ticket on 08 Feb at 14pm</p>
+            <p className='changes-item'>Assigned to Eduardo on 10 Feb at 11am</p>
+            <p className='changes-item'>Change de Priority on 09 Feb at 16:30pm</p>
+            <p className='changes-item'>Edit the Issue on 10 Feb at 11am</p>
+          </div>
+          <div className='modal-body-center'>
+            <textarea name="" id="" cols="30" rows="10" className='issue-area'></textarea>
+            <div className="char">
+              <img src="../images/circle_chart_img.svg" alt="" />
+              <img src="" alt="" />
             </div>
           </div>
+          <div className='modal-body-right'>
+            <button className='button-ticket'>Status</button>
+            <button className='button-ticket'>Priority</button>
+            <button className='button-ticket'>Responsable</button>
+            <button className='button-ticket'>Update Ticket</button>
+          </div>
         </div>
+      </Modal>
       </div>
+
+      
       <main>
         <div className='search-bar'>
           <span className='material-icons menu-show'>menu</span>
@@ -178,7 +78,7 @@ function Tickets() {
               + New ticket
             </NavLink>
           </div>
-          <div className='table-responsive-xxl'>
+          <div className='table-responsive-xxl' >
             <table className='table table-hover mt-5 table-bg'>
               <thead>
                 <tr className='table-color'>
@@ -187,7 +87,7 @@ function Tickets() {
                   </th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody onClick={openModal}>
                 <tr
                   className='table-color'
                   data-bs-toggle='modal'
