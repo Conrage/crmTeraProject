@@ -24,7 +24,7 @@ const ticketSchema = new mongoose.Schema(
     "created": {
         type: Date,
         default: Date.now
-    } 
+    }
 })
 
 const Ticket = mongoose.model('tickets', ticketSchema)

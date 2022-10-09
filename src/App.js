@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Dashboard from './views/Dashboard';
 import Tickets from './views/Tickets';
 import CreateTicket from './views/CreateTicket';
-import DetailsTicket from './views/DetailsTicket';
+
 
 import Sidebar from './components/Sidebar';
 
@@ -16,6 +16,19 @@ import './styles/DetailsTicket.css'
 
 
 function App() {
+// eslint-disable-next-line
+  const [backendData, setBackendData] = useState([{}])
+
+  useEffect(() => {
+    fetch("crm-tera/ticket/all").then(
+      response => response.json()
+    ).then(
+      data => {
+        setBackendData(data)
+      }
+    )
+  }, [])
+
   return (
     <BrowserRouter>
       <Sidebar></Sidebar>
@@ -23,7 +36,7 @@ function App() {
         <Route index element={<Dashboard />} />
         <Route path='/tickets' element={<Tickets />} />
         <Route path='/create/ticket' element={<CreateTicket />} />
-        <Route path='/DetailsTicket' element={<DetailsTicket />} />
+        
       </Routes>
     </BrowserRouter>
   );
