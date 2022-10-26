@@ -16,9 +16,10 @@ export default function OneTicket(props) {
   const [status, setStatus] = useState(`${props.ticket.status}`);
   const [issue, setIssue] = useState(`${props.ticket.issue}`);
   const [priority, setPriority] = useState(`${props.ticket.priority}`);
+  const [assigned, setAssigned] = useState(`${props.ticket.assigned}`);
 
   const updateTicket = () => {
-    const currentTicker = { issue, status, priority };
+    const currentTicker = { issue, status, priority, assigned };
     axios.put(
       `https://teracrm.herokuapp.com/crm-tera/ticket/update/${props.ticket._id}`,
       currentTicker
@@ -81,14 +82,15 @@ export default function OneTicket(props) {
               <p className="changes-item">Edit the Issue on 10 Feb at 11am</p>
             </div>
             <div className="modal-body-center">
-              <p className="issua-area">{props.ticket.issue}</p>
+              <p className="issua-area" onChange={(e) => setIssue(e.value)}>
+                {props.ticket.issue}
+              </p>
               <div className="chart-box circle-chart"></div>
             </div>
             <div className="modal-body-right">
               <Dropdown
                 className="button-ticket"
                 options={optionsStatus}
-                // onChange={}
                 value={props.ticket.status}
                 placeholder="Select an option"
                 onChange={(e) => setStatus(e.value)}
@@ -96,7 +98,6 @@ export default function OneTicket(props) {
               <Dropdown
                 className="button-ticket"
                 options={optionsPriority}
-                // onChange={}
                 value={props.ticket.priority}
                 placeholder="Select an option"
                 onChange={(e) => setPriority(e.value)}
@@ -104,10 +105,9 @@ export default function OneTicket(props) {
               <Dropdown
                 className="button-ticket"
                 options={optionsResponsable}
-                // onChange={}
                 value={props.ticket.assigned}
                 placeholder="Select an option"
-                onChange={(e) => setIssue(e.value)}
+                onChange={(e) => setAssigned(e.value)}
               />
               <button className="button-ticket-update" onClick={updateTicket}>
                 Update Ticket
