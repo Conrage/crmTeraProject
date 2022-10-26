@@ -2,7 +2,7 @@
     main .search-bar .material-icons.menu-show {
         display: block !important;
     }
-    sidebar {
+    .sidebar {
         transform: translateX(-100%);
         display: none;
         box-shadow: 0px 10px 250px 300px rgb(0 0 0 / 20%);

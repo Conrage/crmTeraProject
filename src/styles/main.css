@@ -164,7 +164,7 @@ main {
   padding-left: 20rem;
 }
 
-sidebar {
+.sidebar {
   height: 100%;
   width: 20rem;
   position: fixed;
@@ -175,7 +175,7 @@ sidebar {
   box-shadow: 0px 0px 21px 5px rgba(0, 0, 0, 0.06);
 }
 
-sidebar .header {
+.sidebar .header {
   padding: 1.8rem;
   padding-bottom: 0rem;
   width: 100%;
@@ -184,29 +184,29 @@ sidebar .header {
   place-items: center;
 }
 
-sidebar .main {
+.sidebar .main {
   padding: 1.8rem 0rem 1.8rem 0rem;
 }
 
-sidebar .main .user-info {
+.sidebar .main .user-info {
   display: flex;
   width: 100%;
   justify-content: center;
   gap: 1.2rem;
 }
 
-sidebar .main .user-info .user-img {
+.sidebar .main .user-info .user-img {
   height: 4rem;
   width: 4rem;
   overflow: hidden;
   border-radius: 50%;
 }
 
-sidebar .main .user-info .info {
+.sidebar .main .user-info .info {
   padding: 0.3rem;
 }
 
-sidebar .main .user-info .info p {
+.sidebar .main .user-info .info p {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
@@ -214,7 +214,7 @@ sidebar .main .user-info .info p {
   color: var(--text-color);
 }
 
-sidebar .main .user-info .info span {
+.sidebar .main .user-info .info span {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 300;
@@ -222,7 +222,7 @@ sidebar .main .user-info .info span {
   color: var(--text-color);
 }
 
-sidebar .main nav-menu {
+.sidebar .main nav-menu {
   display: flex;
   flex-direction: column;
   padding: 2.5rem 0 2rem 1rem;
@@ -230,7 +230,7 @@ sidebar .main nav-menu {
   width: 100%;
 }
 
-sidebar nav-menu .nav-item {
+.sidebar nav-menu .nav-item {
   appearance: none;
   text-decoration: none;
   width: 95%;
@@ -244,17 +244,17 @@ sidebar nav-menu .nav-item {
   margin-left: auto;
 }
 
-sidebar nav-menu .nav-item:hover,
-sidebar nav-menu .nav-item:focus {
+.sidebar nav-menu .nav-item:hover,
+.sidebar nav-menu .nav-item:focus {
   background-color: #92e4d11b;
 }
 
-sidebar nav-menu .nav-item.selected {
+.sidebar nav-menu .nav-item.selected {
   background: rgba(146, 228, 209, 0.19);
   border-right: 4px solid #92e4d1;
 }
 
-sidebar nav-menu .nav-item.selected .icon {
+.sidebar nav-menu .nav-item.selected .icon {
   color: #92e4d1;
 }
 

@@ -1,3 +1,6 @@
-body {
+.bg-login {
     background-image: url('../images/login_background.png');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
 }

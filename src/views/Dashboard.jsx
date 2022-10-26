@@ -65,28 +65,45 @@ function Dashboard() {
             </div>
           </div>
           <h4>New tickets</h4>
-          <div className="tickets-list">
-            {tickets.map((ticket) => {
-              return (
-                <div className="ticket">
-                  <div className="company-info">
-                    <img
-                      className="logo"
-                      alt="Slack Logo"
-                      src={SlackLogo}
-                    ></img>
-                    <span>{ticket.client}</span>
-                  </div>
-                  <strong>{ticket.assigned}</strong>
-                  <span className="issue">{ticket.issue}</span>
-                  <div data-status={ticket.status} className="status">
-                    <div>{translateStatus[ticket.status]}</div>
-                    <span className="material-icons">keyboard_arrow_down</span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <table className="tickets-list w-full">
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {tickets.map((ticket) => {
+                return (
+                  <tr key={ticket._id} className="bg-white border border-gray-200">
+                    <td className="pr-3">
+                      <div className="company-info flex gap-2 p-3 items-center">
+                        <img
+                          className="logo h-8"
+                          alt="Slack Logo"
+                          src={`https://source.boringavatars.com/marble/${ticket._id}`}
+                        ></img>
+                        <span className="truncate text-sm">{ticket.client}</span>
+                      </div>
+                    </td>
+                    <td className="pr-3">
+                      <strong className="text-sm font-semibold">{ticket.assigned}</strong>
+                    </td>
+                    <td className="pr-3">
+                      <span className="issue text-sm">{ticket.issue}</span>
+                    </td>
+                    <td className="pr-3">
+                      <div data-status={ticket.status} className="status w-fit ml-auto">
+                        <div>{ticket.status}</div>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
       </main>
     </div>

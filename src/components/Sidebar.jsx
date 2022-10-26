@@ -6,7 +6,7 @@ import UserImage from '../images/user-img.jpg';
 class Sidebar extends Component {
   render() {
     return (
-      <sidebar>
+      <div className='sidebar'>
         <div className='header'>
           <img className='logo' alt='Tera logo' src={TeraLogo}></img>
         </div>
@@ -37,7 +37,7 @@ class Sidebar extends Component {
             </NavLink>
           </nav-menu>
         </div>
-      </sidebar>
+      </div>
     );
   }
 }
