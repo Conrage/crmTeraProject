@@ -15,11 +15,11 @@ const ticketSchema = new mongoose.Schema(
     },
     "priority": {
         type: String,
-        default: "normal"
+        default: "Normal"
     },
     "status": {
         type: String,
-        default: "inprogress"
+        default: "In progress"
     },
     "created": {
         type: Date,
@@ -27,6 +27,6 @@ const ticketSchema = new mongoose.Schema(
     }
 })
 
-const Ticket = mongoose.model('tickets', ticketSchema)
+const ticket = mongoose.model('tickets', ticketSchema)
 
-export default Ticket;
+export default ticket;
