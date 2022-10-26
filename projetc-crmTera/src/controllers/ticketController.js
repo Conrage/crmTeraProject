@@ -30,10 +30,19 @@ const getAllTickets = async (req, res) => {
 }
 
 const updateTicket = async (req, res) => {
-    const { issue, status, priority, } = req.body;
-    ticket.findByIdAndUpdate(req.params.id, { issue, status, priority });
+    try{
+        const {issue, status, priority, } = req.body;
+        await ticket.findByIdAndUpdate(req.params.id, {issue, status, priority})
+        return res.status(200).send({"message": "Ticket Atualizado com sucesso"})
+    } catch(error){
+        return res.status(400).send(error)
+    }
+    
+    
+    // const { issue, status, priority, } = req.body;
+    // ticket.findByIdAndUpdate(req.params.id, { issue, status, priority });
 
-    return res.status(200).send({"message": "Ticket atualizando com sucesso."})
+    // return res.status(200).send({"message": "Ticket atualizando com sucesso."})
 }
 
 const deleteTicket = async (req, res) => {

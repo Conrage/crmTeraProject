@@ -15,11 +15,11 @@ const ticketSchema = new mongoose.Schema(
     },
     "priority": {
         type: String,
-        default: "normal"
+        default: "Normal"
     },
     "status": {
         type: String,
-        default: "inprogress"
+        default: "In progress"
     },
     "created": {
         type: Date,
