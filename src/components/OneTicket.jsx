@@ -27,6 +27,12 @@ export default function OneTicket(props) {
     console.log(currentTicker);
   };
 
+  const deleteTicket = () => {
+    axios.delete(
+      `https://teracrm.herokuapp.com/crm-tera/ticket/delete/${props.ticket._id}`
+    );
+  };
+
   function openModal() {
     setIsOpen(true);
   }
@@ -111,6 +117,9 @@ export default function OneTicket(props) {
               />
               <button className="button-ticket-update" onClick={updateTicket}>
                 Update Ticket
+              </button>
+              <button className="button-ticket-delete" onClick={deleteTicket}>
+                DELETE Ticket
               </button>
             </div>
           </div>

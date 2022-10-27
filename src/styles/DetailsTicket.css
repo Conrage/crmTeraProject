@@ -91,7 +91,19 @@
 
 .button-ticket-update{
     width: 75%;
-    background-image: linear-gradient(99.44deg, #f1836d 10.42%, #e03506 155.94%);
+    background-image: linear-gradient(99.44deg, #3f8d2e 10.42%, #519602 155.94%);
+    border-radius: 4px;
+    box-shadow: 0.8px 0.8px #7786878b;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+
+.button-ticket-delete{
+    width: 75%;
+    background-image: linear-gradient(99.44deg, #cd4024 10.42%, #9b2302 155.94%);
     border-radius: 4px;
     box-shadow: 0.8px 0.8px #7786878b;
     color: #ffffff;
