@@ -24,13 +24,14 @@ export default function OneTicket(props) {
       `https://teracrm.herokuapp.com/crm-tera/ticket/update/${props.ticket._id}`,
       currentTicker
     );
-    console.log(currentTicker);
+    closeModal();
   };
 
   const deleteTicket = () => {
     axios.delete(
       `https://teracrm.herokuapp.com/crm-tera/ticket/delete/${props.ticket._id}`
     );
+    closeModal();
   };
 
   function openModal() {
