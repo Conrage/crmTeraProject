@@ -46,9 +46,9 @@ function Login() {
           email,
           password,
           name: username,
-          cpf: "",
-          birth: "",
-          tel: "",
+          cpf: "0",
+          birth: "0",
+          tel: "0",
         }
       );
 
@@ -57,7 +57,6 @@ function Login() {
         message: "Registrado com sucesso!",
       });
       setIsRegister(false);
-
     } catch (error) {
       setModal({
         code: "error",
