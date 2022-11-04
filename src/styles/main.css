@@ -138,17 +138,19 @@ select {
   color: var(--cor-progress-completed);
 }
 
-main .search-bar .material-icons.menu-show {
-  left: 2rem;
+.material-icons.menu-show {
   cursor: pointer;
   display: none;
+  margin-top: 2rem;
+  margin-left: 1.5rem;
+  z-index: 1;
   transition: 0.2s;
 }
 
-main .search-bar .material-icons.menu-show:hover,
-main .search-bar .material-icons.menu-show:focus {
+.material-icons.menu-show:hover,
+.material-icons.menu-show:focus {
   color: #2c2c2c;
-  transform: scale(1.05) translateY(-50%);
+  transform: scale(1.05);
 }
 
 .dashboard-container, .tickets-container, .create-ticket-container {
@@ -170,7 +172,7 @@ main {
   position: fixed;
   display: block;
   transition: 0.4s;
-  z-index: 1;
+  z-index: 100;
   background: var(--bg-color);
   box-shadow: 0px 0px 21px 5px rgba(0, 0, 0, 0.06);
 }

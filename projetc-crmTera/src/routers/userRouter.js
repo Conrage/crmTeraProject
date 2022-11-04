@@ -6,6 +6,7 @@ import userController from "../controllers/userController.js"
 
 
 router.get("/", userController.home);
+router.post("/token", userController.verifyToken);
 router.post("/registrer/", userController.userRegistrer);
 router.post("/login", userController.authentication);
 

@@ -1,6 +1,7 @@
 @media screen and (max-width: 1200px) {
-    main .search-bar .material-icons.menu-show {
+    .material-icons.menu-show {
         display: block !important;
+        position: absolute;
     }
     .sidebar {
         transform: translateX(-100%);

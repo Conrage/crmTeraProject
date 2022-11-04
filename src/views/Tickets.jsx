@@ -20,7 +20,6 @@ function Tickets() {
     <div className="tickets-container">
       <main>
         <div className="search-bar">
-          <span className="material-icons menu-show">menu</span>
           <div className="search-input-box">
             <span className="material-icons">search</span>
             <input placeholder="Search your ticket" />

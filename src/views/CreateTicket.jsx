@@ -18,7 +18,6 @@ function CreateTicket() {
     <div className="create-ticket-container">
       <main className="ticket-page">
         <div className="search-bar">
-          <span className="material-icons menu-show">menu</span>
           <div className="search-input-box">
             <input style={{ backgroundColor: "#fff" }} disabled />
           </div>
